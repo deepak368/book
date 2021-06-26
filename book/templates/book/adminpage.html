@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+{%extends 'book/base.html'%}
+
+{%block body_block%}
+
+          <section id="hero" class="d-flex justify-cntent-center align-items-center">
+    <div id="heroCarousel" data-bs-interval="5000" class="container carousel carousel-fade" data-bs-ride="carousel">
+      <div class="carousel-item active">
+        <div class="carousel-container">
+          <h2 class="animate__animated animate__fadeInDown">admin page</h2>
+          <p class="animate__animated animate__fadeInUp">Here admin can edit delete and add books to the application
+              <br>ONLY ADMIN CAN ACCESS!!! </p>
+          <a href="{%url 'create'%}" class="btn-get-started animate__animated animate__fadeInUp scrollto">Add books</a>
+            <a href="{%url 'admin'%}" class="btn-get-started animate__animated animate__fadeInUp scrollto">Edit/Delete book</a>
+        </div>
+      </div>
+
+{% endblock %}

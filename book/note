@@ -1,0 +1,21 @@
+there is two model user and admin
+
+admin
+-admin can create,update,delete book
+-admin also have to login
+-super user=username=deepak.p
+            password=deepak@123
+-only admin can asses update,create,delete books
+
+clint
+-clint can book the book
+-search the book
+-order book
+=========================================================================
+the url direct to the log in page first
+http://127.0.0.1:8000/=login page eg:username=deepak123,password=19336874@deepak
+http://127.0.0.1:8000/createbook=to create book
+http://127.0.0.1:8000/book/list=to list all book
+http://127.0.0.1:8000/admin-page=in will direct to admin page were we can edit delete and create book only admin can
+do this
+http://127.0.0.1:8000/

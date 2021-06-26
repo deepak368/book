@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+{%extends 'book/base.html'%}
+
+{%block body_block%}
+<form action="" method="get">
+    {{filter.form.as_p}}
+    <button type="submit" class="btn btn-success"> search</button>
+</form>
+<div class="row">
+     {%for bok in filter.qs%}
+    <div class="col-3">
+
+        <div class="card" style="width: 17rem; height:17rem; margin-top: 10px">
+  <img src="{{bok.img.url}}" height="120px"  class="card-img-top" alt="...">
+  <div class="card-body">
+    <h6 class="card-title">Book name: {{bok.Book_name}}</h6>
+    <h6 class="card-text">Author: {{bok.Author}}</h6>
+    <h6 class="card-text">Price: {{bok.Price}}</h6>
+    <a href="{%url 'order' bok.id%}" class="btn btn-primary">BUY</a>
+  </div>
+</div>
+
+    </div>
+    {%endfor%}
+</div>
+
+{% endblock %}

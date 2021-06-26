@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+{%extends 'book/base.html'%}
+
+{%block body_block%}
+<div class="row">
+     {%for list in lists%}
+    <div class="col-3">
+
+        <div class="card" style="width: 17rem; height:17rem; margin-top: 10px">
+  <img src="{{list.img.url}}" height="120px"  class="card-img-top" alt="...">
+  <div class="card-body">
+    <h6 class="card-title">Book name: {{list.Book_name}}</h6>
+    <h6 class="card-text">Author: {{list.Author}}</h6>
+    <h6 class="card-text">Price: {{list.Price}}</h6>
+    <a href="{%url 'edit' list.id%}" class="btn btn-success">EDIT</a>
+    <a href="{%url 'delete' list.id%}" class="btn btn-danger">DELETE</a>
+  </div>
+</div>
+
+    </div>
+    {%endfor%}
+</div>
+
+{% endblock %}

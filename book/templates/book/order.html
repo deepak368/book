@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+{%extends 'book/base.html'%}
+
+{%block body_block%}
+
+
+<form action="" method="POST">{%csrf_token%}
+<div class="row base">
+            <div class="login-box">
+                <div class="login-snip"> <input  type="radio"  class="sign-in" checked>
+                    <label class="tab">User Login</label> <input  class="sign-up"><label  class="tab"></label>
+                    <div class="login-space">
+                        <div class="login">
+                            <div class="group">
+                                <label for="username" class="label">Product</label>
+                                {{form.Product}}
+                            </div>
+                            <div class="group">
+                                <label for="password" class="label" >Adress</label>
+                                {{form.address}}
+                            </div>
+                            <div class="group">
+                                <label for="password" class="label" >quantity</label>
+                                {{form.quantity}}
+                            </div>
+
+                            <div class="group">
+                                <input type="submit" class="button" value="BOOK">
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+{% endblock %}

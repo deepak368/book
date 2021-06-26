@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+{%extends 'book/base.html'%}
+
+{%block body_block%}
+<table class="table table-success table-striped">
+            <tr>
+
+                <td><h5>Product</h5></td>
+                <td><h5>Address</h5></td>
+                 <td><h5>Price</h5></td>
+                <td><h5>status</h5></td>
+
+
+            </tr>
+            {%for order in orders%}
+            <tr>
+
+                <td>{{order.product}}</td>
+                <td>{{order.address}}</td>
+                <td>{{order.product.price}}</td>
+                <td>{{order.status}}</td>
+                <td><img src="{{order.product.img.url}}" alt="" height="70px"></td>
+            </tr>
+            {% endfor %}
+        </table>
+
+{% endblock %}
